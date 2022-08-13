@@ -1,3 +1,7 @@
 Decentralized exchange
 
 Exchange Contract Address:  0x768cc7cAa4fEaE719ed07a7e2aC25B24414830Aa
+
+Exchange Contract Address2:  0x657a968008ceF2D543cc9d1df36F0FC911a215d1
+
+Exchange Contract Address3:  0x589d17BFDFFF90C80F6B0c255e22391d7984aEA6

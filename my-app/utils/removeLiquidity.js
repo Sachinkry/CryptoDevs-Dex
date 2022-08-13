@@ -14,8 +14,8 @@ export const removeLiquidity = async (signer, removeLPtokensWei) => {
     try {
         // create an instance of exchange contract
         const exchangeContract = new Contract(
-            EXCHANGE_CONTRACT_ABI,
             EXCHANGE_CONTRACT_ADDRESS,
+            EXCHANGE_CONTRACT_ABI,
             signer
         );
         // call removeLiquidity function using the contract instance
@@ -40,8 +40,8 @@ export const getTokensAfterRemove = async (
     try {
         // create an instance of exchange contract
         const exchangeContract = new Contract(
-            EXCHANGE_CONTRACT_ABI,
             EXCHANGE_CONTRACT_ADDRESS,
+            EXCHANGE_CONTRACT_ABI,
             provider
         );
 

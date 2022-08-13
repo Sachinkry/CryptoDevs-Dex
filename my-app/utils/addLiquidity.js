@@ -24,8 +24,8 @@ export const addLiquidity = async (
 
         // create an instance of token contract
         const tokenContract = new Contract(
-            TOKEN_CONTRACT_ABI,
             TOKEN_CONTRACT_ADDRESS,
+            TOKEN_CONTRACT_ABI,
             signer
         );
 

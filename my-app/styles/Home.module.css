@@ -56,10 +56,10 @@
 .inputDiv {
   width: 200px;
   height: 100%;
-  padding: 1%;
+  padding: 3%;
   margin: 2%;
-  border: lightslategray;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border: rgb(121, 195, 173);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
 }
 .select {

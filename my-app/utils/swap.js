@@ -14,28 +14,33 @@ export const getAmountOfTokensReceivedFromSwap = async (
     provider,
     ethSelected,
     ethBalance,
-    reserveCD
+    reservedCD
 ) => {
     try {
         const exchangeContract = new Contract(
-            EXCHANGE_CONTRACT_ABI,
             EXCHANGE_CONTRACT_ADDRESS,
+            EXCHANGE_CONTRACT_ABI,
             provider
         );
-        let amountOfTokens;
+        let amountOfTokens = 0;
         if (ethSelected) {
-            amountOfTokens = await exchangeContract.ethToCryptoDevToken(
+            console.log("para:");
+
+            console.log("amount of tokens: ", amountOfTokens);
+            amountOfTokens = await exchangeContract.getAmountOfTokens(
                 _swapAmountWei,
                 ethBalance,
-                reserveCD
+                reservedCD
             );
+            console.log("sfdfds");
         } else {
-            amountOfTokens = await exchangeContract.cryptoDevTokenToEth(
+            amountOfTokens = await exchangeContract.getAmountOfTokens(
                 _swapAmountWei,
-                reserveCD,
+                reservedCD,
                 ethBalance
             );
         }
+        console.log("amountTokens: ", amountOfTokens);
         return amountOfTokens;
 
     } catch (err) {
